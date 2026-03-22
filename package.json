@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx server.ts",
     "build:client": "vite build",
-    "build:server": "esbuild server.ts --bundle --platform=node --target=node22 --outfile=dist/server.cjs --format=cjs --external:express --external:cors --external:dotenv --external:google-spreadsheet --external:googleapis --external:@google/genai",
+    "build:server": "esbuild server.ts --bundle --platform=node --target=node22 --outfile=dist/server.cjs --format=cjs --external:express --external:cors --external:dotenv --external:google-spreadsheet --external:googleapis --external:@google/genai --external:vite --external:fs --external:path --external:crypto",
     "build": "npm run build:client && npm run build:server",
     "start": "node dist/server.cjs",
     "preview": "vite preview",
