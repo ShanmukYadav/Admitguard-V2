@@ -4,11 +4,8 @@ import { ApplicationData, EducationPath, EducationLevel } from '../../src/types'
 const fileCache = new Map<string, any>();
 
 export async function autoFillFromDocuments(files: { name: string; base64: string; mimeType: string }[]) {
-  const envKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
-  const rawApiKey = (envKey === 'MY_GEMINI_API_KEY' || envKey.length < 20) 
-    ? "" 
-    : envKey;
-  const apiKey = rawApiKey ? rawApiKey.trim().replace(/^"|"$/g, '') : undefined;
+  const rawApiKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
+  const apiKey = rawApiKey.trim().replace(/^"|"$/g, '');
   console.log("API Key being used:", apiKey ? apiKey.substring(0, 10) + "..." : "NONE");
   console.log("API Key length:", apiKey?.length);
   

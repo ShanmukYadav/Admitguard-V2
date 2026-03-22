@@ -2,11 +2,8 @@ import { GoogleGenAI } from "@google/genai";
 import { ApplicationData, ValidationResult } from "../../src/types";
 
 export async function getAIInsights(data: ApplicationData, result: ValidationResult) {
-  const envKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
-  const rawApiKey = (envKey === 'MY_GEMINI_API_KEY' || envKey.length < 20) 
-    ? "" 
-    : envKey;
-  const apiKey = rawApiKey ? rawApiKey.trim().replace(/^"|"$/g, '') : undefined;
+  const rawApiKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
+  const apiKey = rawApiKey.trim().replace(/^"|"$/g, '');
   
   if (!apiKey || apiKey === 'MY_GEMINI_API_KEY' || apiKey.length < 10) {
     console.warn("GEMINI_API_KEY missing, placeholder, or invalid. Skipping AI insights.");
