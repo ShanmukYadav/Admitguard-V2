@@ -1,0 +1,3 @@
+FullName,Email,Phone,DateOfBirth,EducationLevel,University,YearOfPassing,Score,ScoreScale,Stream,Backlogs,Company,Role,Domain,StartDate,EndDate,IsCurrent,EmploymentType,Skills
+Alex Johnson,alex.johnson@example.com,+1-415-555-0198,1997-03-12,Bachelors,University of Washington,2019,3.8,4.0,Information Systems,0,InnovateTech,Software Engineer,Cloud Computing,2021-06-01,Present,True,Full-time,"AWS, Node.js, TypeScript, Docker"
+Alex Johnson,alex.johnson@example.com,+1-415-555-0198,1997-03-12,Masters,Carnegie Mellon University,2021,3.95,4.0,Software Engineering,0,,,,,,,,

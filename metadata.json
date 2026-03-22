@@ -1,0 +1,5 @@
+{
+  "name": "AdmitGuard v2",
+  "description": "A production-grade admission validation and intelligence platform with multi-tier scoring and Google Sheets integration.",
+  "requestFramePermissions": []
+}

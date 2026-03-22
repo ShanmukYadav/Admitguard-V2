@@ -1,0 +1,27 @@
+Field,Value
+Full Name,Alex Johnson
+Email,alex.johnson@example.com
+Phone,+1-415-555-0198
+Date of Birth,1997-03-12
+Education 1 Level,Bachelors
+Education 1 University,University of Washington
+Education 1 Year,2019
+Education 1 Score,3.8
+Education 1 Scale,4.0
+Education 1 Stream,Information Systems
+Education 1 Backlogs,0
+Education 2 Level,Masters
+Education 2 University,Carnegie Mellon University
+Education 2 Year,2021
+Education 2 Score,3.95
+Education 2 Scale,4.0
+Education 2 Stream,Software Engineering
+Education 2 Backlogs,0
+Work 1 Company,InnovateTech
+Work 1 Role,Software Engineer
+Work 1 Domain,Cloud Computing
+Work 1 Start Date,2021-06-01
+Work 1 End Date,Present
+Work 1 Is Current,True
+Work 1 Type,Full-time
+Work 1 Skills,AWS; Node.js; TypeScript; Docker

@@ -1,0 +1,6 @@
+Full Name,Email,Phone,Date of Birth,Edu Level,Edu Board/University,Edu Year of Passing,Edu Score,Edu Score Scale,Edu Stream,Edu Backlogs,Work Company,Work Role,Work Domain,Work Start Date,Work End Date,Work Employment Type,Work Skills
+Priya Patel,priya.p@example.com,9123456789,1999-05-20,10th,State Board,2015,92,Percentage,General,0,,,,,,,
+Priya Patel,priya.p@example.com,9123456789,1999-05-20,12th,State Board,2017,89,Percentage,Science,0,,,,,,,
+Priya Patel,priya.p@example.com,9123456789,1999-05-20,UG,Mumbai University,2021,8.8,CGPA_10,Information Technology,0,,,,,,,
+Priya Patel,priya.p@example.com,9123456789,1999-05-20,,,,,,,,TCS,Systems Engineer,Software Development,2021-08-01,2023-12-31,Full-time,"Java, Spring Boot, SQL"
+Priya Patel,priya.p@example.com,9123456789,1999-05-20,,,,,,,,Infosys,Technology Analyst,Software Development,2024-01-15,Present,Full-time,"Cloud, Microservices"

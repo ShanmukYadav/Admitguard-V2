@@ -1,0 +1,5 @@
+fullName,email,phone,dateOfBirth,education_level,education_boardUniversity,education_yearOfPassing,education_score,education_scoreScale,education_stream,education_backlogs,work_company,work_role,work_domain,work_startDate,work_endDate,work_isCurrent,work_employmentType,work_skills
+John Doe,john.doe@example.com,555-0100,1998-05-15,10th,CBSE,2014,85,Percentage,General,0,,,,,,,,,
+John Doe,john.doe@example.com,555-0100,1998-05-15,12th,CBSE,2016,88,Percentage,Science,0,,,,,,,,,
+John Doe,john.doe@example.com,555-0100,1998-05-15,UG,MIT,2020,8.5,CGPA_10,Computer Science,0,TechCorp,Software Engineer,Software Development,2020-06-01,2022-05-31,false,Full-time,"React, Node.js, TypeScript"
+John Doe,john.doe@example.com,555-0100,1998-05-15,,,,,,,,InnovateInc,Senior Developer,Software Development,2022-06-01,,true,Full-time,"System Design, AWS, Python"
