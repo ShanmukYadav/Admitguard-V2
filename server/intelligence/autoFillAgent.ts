@@ -6,7 +6,7 @@ const fileCache = new Map<string, any>();
 export async function autoFillFromDocuments(files: { name: string; base64: string; mimeType: string }[]) {
   const envKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
   const rawApiKey = (envKey === 'MY_GEMINI_API_KEY' || envKey.length < 20) 
-    ? "AIzaSyD0Hp0xl0Lgt3g79fAgmCZzykIunHRbgF0" 
+    ? "" 
     : envKey;
   const apiKey = rawApiKey ? rawApiKey.trim().replace(/^"|"$/g, '') : undefined;
   console.log("API Key being used:", apiKey ? apiKey.substring(0, 10) + "..." : "NONE");

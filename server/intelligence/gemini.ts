@@ -4,7 +4,7 @@ import { ApplicationData, ValidationResult } from "../../src/types";
 export async function getAIInsights(data: ApplicationData, result: ValidationResult) {
   const envKey = process.env.GEMINI_API_KEY || process.env.API_KEY || '';
   const rawApiKey = (envKey === 'MY_GEMINI_API_KEY' || envKey.length < 20) 
-    ? "AIzaSyD0Hp0xl0Lgt3g79fAgmCZzykIunHRbgF0" 
+    ? "" 
     : envKey;
   const apiKey = rawApiKey ? rawApiKey.trim().replace(/^"|"$/g, '') : undefined;
   
