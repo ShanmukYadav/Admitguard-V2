@@ -4,11 +4,9 @@
 
 ### Enterprise-Grade Admission Validation Platform with Agentic AI
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-AI%20Studio-blue?style=for-the-badge&logo=google)](https://aistudio.google.com/apps/32673476-7065-4cc3-947e-32e490856183?showAssistant=true&showPreview=true)
-[![GitHub](https://img.shields.io/badge/GitHub-ShanmukYadav%2FAdmitguard--V2-black?style=for-the-badge&logo=github)](https://github.com/ShanmukYadav/Admitguard-V2)
+[![Live App](https://img.shields.io/badge/Live%20App-Render-blue?style=for-the-badge&logo=render)](https://admitguard-v2.onrender.com)
 [![Google Sheets](https://img.shields.io/badge/Live%20Data-Google%20Sheets-green?style=for-the-badge&logo=googlesheets)](https://docs.google.com/spreadsheets/d/1YViOiL7NKDol_PX5Vi_yILnT7So9FJwyIFiIsRGeAC0/edit?gid=0#gid=0)
-
-*Built for IIT Gandhinagar — PG Diploma in AI-ML & Agentic AI Engineering*
+[![GitHub](https://img.shields.io/badge/Source-GitHub-black?style=for-the-badge&logo=github)](https://github.com/ShanmukYadav/Admitguard-V2)
 
 </div>
 
@@ -31,7 +29,7 @@ AdmitGuard v2 solves all of this in one platform.
 
 | Resource | Link |
 |----------|------|
-| 🌐 Live Application | [Open AdmitGuard v2](https://aistudio.google.com/apps/32673476-7065-4cc3-947e-32e490856183?showAssistant=true&showPreview=true) |
+| 🌐 Live Application | [https://admitguard-v2.onrender.com](https://admitguard-v2.onrender.com) |
 | 📊 Live Google Sheet | [View Real-Time Data](https://docs.google.com/spreadsheets/d/1YViOiL7NKDol_PX5Vi_yILnT7So9FJwyIFiIsRGeAC0/edit?gid=0#gid=0) |
 | 💻 Source Code | [GitHub Repository](https://github.com/ShanmukYadav/Admitguard-V2) |
 
@@ -80,6 +78,24 @@ AdmitGuard v2 solves all of this in one platform.
 │  └─────────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## ☁️ Deployment
+
+AdmitGuard v2 is hosted on **Render** — a full-stack cloud platform that runs both the React frontend and the Express backend together as a single service.
+
+| Detail | Value |
+|--------|-------|
+| Platform | Render (Free Tier) |
+| Live URL | https://admitguard-v2.onrender.com |
+| Runtime | Node.js v22 |
+| Region | Oregon, USA |
+| Build Command | `npm install && npm run build` |
+| Start Command | `node dist/server.cjs` |
+| Auto-Deploy | Yes — every push to `main` triggers a redeploy |
+
+> **Note:** Render free tier spins down after 15 minutes of inactivity. First load may take 30-60 seconds to wake up.
 
 ---
 
@@ -213,7 +229,7 @@ Risk Score =
 | 50 – 100 | 🔴 Weak Fit | Director approval required |
 
 ### Gemini AI Insights
-For flagged and high-risk applications, Gemini 2.5 Flash generates:
+For flagged and high-risk applications, Gemini generates:
 - **Summary** — 2-sentence candidate profile overview
 - **Alignment** — Career fit assessment for technical programs
 - **Strengths** — Key positive aspects of the application
@@ -270,7 +286,7 @@ Read-only view for admissions staff.
 Full control interface for the program director.
 
 - Analytics section: risk score distribution, submissions per day trend, category breakdown
-- **"Needs Director Attention"** — auto-filtered section showing flagged + high-risk + weak fit applications
+- **"Needs Director Attention"** — auto-filtered section showing flagged + high-risk applications
 - Per-application action panel: Approve or Reject with mandatory director note
 - All decisions sync to Google Sheets in real-time
 
@@ -283,9 +299,10 @@ Full control interface for the program director.
 | Frontend | React 19 + TypeScript + Tailwind CSS | Type-safe, responsive, component-driven UI |
 | Backend | Express + TypeScript | Lightweight server with full validation control |
 | Validation | Zod + custom business logic | Schema validation + semantic rules in one pass |
-| Intelligence | Weighted rule engine + Gemini 2.5 Flash | Explainable scores + LLM-powered insights |
-| Agent | Gemini 2.5 Flash (vision + text) | Multi-format document extraction in 1 API call |
+| Intelligence | Weighted rule engine + Gemini AI | Explainable scores + LLM-powered insights |
+| Agent | Gemini (vision + text) | Multi-format document extraction in 1 API call |
 | Reporting | google-spreadsheet v5 + JWT auth | Real-time sync via service account |
+| Hosting | Render | Full-stack Node.js hosting, auto-deploy from GitHub |
 | Build | Vite + esbuild | Fast HMR for frontend + bundled server |
 
 ---
@@ -309,7 +326,7 @@ npm install
 
 # 3. Configure environment
 cp .env.example .env
-# Edit .env with your actual values (see below)
+# Edit .env with your actual values
 
 # 4. Start development server
 npm run dev
@@ -342,10 +359,10 @@ Admitguard-V2/
 ├── server/
 │   ├── intelligence/
 │   │   ├── autoFillAgent.ts         # 🤖 Agentic document extraction
-│   │   └── gemini.ts                # AI insights via Gemini
+│   │   └── gemini.ts                # AI insights generation
 │   │
 │   ├── validation/
-│   │   └── engine.ts                # Tier 1/2/3 validation (Zod + logic)
+│   │   └── engine.ts                # Tier 1/2/3 validation rules
 │   │
 │   └── reporting/
 │       └── sheets.ts                # Google Sheets live sync
@@ -360,7 +377,7 @@ Admitguard-V2/
 │   └── sample_applicant.csv         # Demo CSV for auto-fill testing
 │
 ├── .env.example                     # Environment variable template
-├── DEPLOYMENT.md                    # Deployment guide (Render/Vercel)
+├── DEPLOYMENT.md                    # Deployment guide
 └── README.md                        # This file
 ```
 
@@ -372,33 +389,30 @@ Admitguard-V2/
 Client-side `required` attributes are UX convenience only. All 3 tiers enforced entirely in `engine.ts`. Cannot be bypassed by disabling JavaScript.
 
 **2. Single Gemini call per document**
-Earlier versions made 3 separate API calls per file (detect type → extract data → merge). Refactored to 1 combined call — reduces API quota usage by 66% and latency by ~2 seconds per document.
+Earlier versions made 3 separate API calls per file. Refactored to 1 combined call — reduces API quota usage by 66% and latency by ~2 seconds per document.
 
 **3. Human-in-the-loop agent design**
-The agent fills the form but never submits it. The counselor always reviews and confirms. This is intentional — AI assists, human decides. Prevents silent data errors.
+The agent fills the form but never submits it. The counselor always reviews and confirms. AI assists — human decides.
 
 **4. Weighted risk scoring**
-Simple flag counting produces scores that cluster at the same values. The weighted formula with different multipliers per risk factor produces a meaningful distribution that's also explainable in a viva: *"This candidate scored 45 because of 2 flags (×10 each) + declining score trend (+10) + low UG score (+15)".*
+Simple flag counting produces scores that cluster at the same values. The weighted formula with different multipliers per risk factor produces a meaningful, explainable distribution.
+
+**5. Render over Vercel**
+Vercel is frontend-only. Render supports full-stack Node.js with persistent processes — essential for the Express backend and in-memory application store.
 
 ---
 
 ## ⚠️ Known Limitations
 
 - No user authentication — director dashboard is open access (v3 would add OAuth)
-- Gemini free tier: ~20 requests/day — sufficient for demo, needs paid tier for production scale
-- In-memory application store resets on server restart (mitigated by `applications.json` file persistence)
-- Duplicate detection is session-based, not persistent across server restarts
+- Render free tier spins down after inactivity — first load may be slow
+- Gemini free tier: ~20 requests/day — sufficient for demo, needs paid tier for production
+- In-memory store resets on server restart (mitigated by `applications.json` persistence)
 
 ---
 
 <div align="center">
 
----
-
-*AdmitGuard v2 — Week 1 Sprint Project*
-
-*PG Diploma in AI-ML & Agentic AI Engineering, IIT Gandhinagar*
-
-**Shanmuk Yadav**
+*AdmitGuard v2 — Enterprise Admission Validation Platform*
 
 </div>
