@@ -416,3 +416,58 @@ Vercel is frontend-only. Render supports full-stack Node.js with persistent proc
 *AdmitGuard v2 — Enterprise Admission Validation Platform*
 
 </div>
+
+---
+
+## 🔮 Future Scope
+
+### 1. Bulk CSV Processing (High Priority)
+Currently the auto-fill agent reads a CSV and fills the form for **one candidate at a time** — the counselor still has to review and submit each one manually.
+
+The next version would support **true bulk processing**:
+```
+Upload CSV with 50-60 candidates
+           │
+           ▼
+Agent reads ALL rows automatically
+           │
+           ▼
+Each row → Validation Engine → Intelligence Layer
+           │
+           ▼
+All records written to Google Sheets in one batch
+           │
+           ▼
+Summary report: X passed, Y flagged, Z rejected
+```
+
+This would reduce a 2-hour manual data entry session to a single CSV upload — the entire point of the platform.
+
+### 2. Authentication & Role-Based Access
+Currently the Director Dashboard is open to anyone with the URL. v3 would add:
+- Google OAuth login
+- Role assignment: Counselor / Director / Admin
+- Audit log showing who viewed/approved what and when
+
+### 3. Multi-Institution Rule Engine
+Currently validation rules are hardcoded for one program. Future version would support:
+- Multiple institutions with separate rule sets
+- Rules editable via a UI (no code changes needed)
+- Rule versioning — track which cohort used which rule set
+
+### 4. ML-Based Risk Scoring
+Current risk scoring is rule-based (weighted formula). Once enough historical data accumulates in Google Sheets:
+- Train a logistic regression model on past admission outcomes
+- Replace the rule-based score with a model prediction
+- Continuously retrain as more data comes in
+
+### 5. Automated Offer Letter Pipeline
+Currently AdmitGuard only validates and consolidates data — offer letters are issued separately. Future integration would:
+- Auto-generate offer letter PDFs for APPROVED candidates
+- Send via email directly from the platform
+- Track acceptance/rejection responses
+
+### 6. WhatsApp / Email Notifications
+- Notify candidates automatically when their application status changes
+- Alert directors when high-risk applications need review
+- Weekly digest reports to program heads
