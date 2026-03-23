@@ -2,11 +2,10 @@
 
 # 🛡️ AdmitGuard v2
 
-### Enterprise-Grade Admission Validation Platform with Agentic AI
-
+### Admission Validation Platform with Agentic AI
 [![Live App](https://img.shields.io/badge/Live%20App-Render-blue?style=for-the-badge&logo=render)](https://admitguard-v2.onrender.com)
-[![Google Sheets](https://img.shields.io/badge/Live%20Data-Google%20Sheets-green?style=for-the-badge&logo=googlesheets)](https://docs.google.com/spreadsheets/d/1YViOiL7NKDol_PX5Vi_yILnT7So9FJwyIFiIsRGeAC0/edit?gid=0#gid=0)
-[![GitHub](https://img.shields.io/badge/Source-GitHub-black?style=for-the-badge&logo=github)](https://github.com/ShanmukYadav/Admitguard-V2)
+[![Google Sheets](https://img.shields.io/badge/Google%20Sheets-Live%20Data-green?style=for-the-badge&logo=googlesheets)](https://docs.google.com/spreadsheets/d/1YViOiL7NKDol_PX5Vi_yILnT7So9FJwyIFiIsRGeAC0/edit?gid=0#gid=0)
+[![GitHub](https://img.shields.io/badge/GitHub-Source%20Code-black?style=for-the-badge&logo=github)](https://github.com/ShanmukYadav/Admitguard-V2)
 
 </div>
 
@@ -413,7 +412,7 @@ Vercel is frontend-only. Render supports full-stack Node.js with persistent proc
 
 <div align="center">
 
-*AdmitGuard v2 — Enterprise Admission Validation Platform*
+*AdmitGuard v2 — Admission Validation Platform*
 
 </div>
 
